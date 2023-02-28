@@ -1,4 +1,5 @@
 import requests
+import os
 
 from flask import Flask, render_template
 
@@ -11,14 +12,9 @@ def get_weather_from_omw():
     MY_LONG = -76.33500179850502 # Your longitude
 
     # read in environmental variables 
-    # api_key = config("API_KEY")
-    # account_sid = config("ACCOUNT_SID")
-    # auth_token = config("AUTH_TOKEN")
-
-    api_key = "a1d5030a6d4d4631003e27a0fbf462b4"
-    account_sid = 'AC04033c01600bf128ac2d856110e3b496'
-    auth_token = '954e7c29bafdda4ba56c53da7df04516'
-
+    api_key = os.getenv("API_KEY")
+    account_sid = os.getenv("ACCOUNT_SID")
+    auth_token = os.getenv("AUTH_TOKEN")
 
     TEST_LAT = 42.112894
     TEST_LONG = -70.796805
