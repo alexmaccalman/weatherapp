@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    environment:
+      RECOMMENDATIONS_HOST: frontend
+    image: frontend
+    networks:
+      - microservices
+    ports:
+      - 5000:5000
+
+  weather_api:
+    build:
+      context: .
+      dockerfile: weather_api/Dockerfile
+    image: weather_api
+    networks:
+      - microservices
+
+networks:
+  microservices:
