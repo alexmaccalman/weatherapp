@@ -22,7 +22,7 @@ def get_weather_from_omw():
     weather_params = {
         "lat": MY_LAT,
         "lon": MY_LONG,
-        "appid": api_key,
+        "appid": API_KEY,
         "exclude": "current,minutely,daily"
     }
 

@@ -1,3 +1,8 @@
+# 
+# docker build . -f Dockerfile -t weather_api
+# docker run -p 127.0.0.1:50051:50051/tcp weather_api
+# docker run --name weather_api -p 50051:50051 -d weather_api
+
 # Use an official Python runtime as a parent image
 FROM python
 

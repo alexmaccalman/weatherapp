@@ -1,3 +1,8 @@
+
+# docker build . -f Dockerfile -t frontend
+# docker run -p 127.0.0.1:5000:5000/tcp frontend
+# docker run --name frontend -p 5000:5000 -d frontend
+
 # Use an official Python runtime as a parent image
 FROM python
 
